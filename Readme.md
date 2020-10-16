@@ -1,8 +1,4 @@
-# Spring Boot, MySQL, JPA, Hibernate Rest API Tutorial
-
-Build Restful CRUD API for a simple Note-Taking application using Spring Boot, Mysql, JPA and Hibernate.
-
-## Requirements
+## Prérequis
 
 1. Java - 1.8.x
 
@@ -10,43 +6,45 @@ Build Restful CRUD API for a simple Note-Taking application using Spring Boot, M
 
 3. Mysql - 5.x.x
 
-## Steps to Setup
+## Etapes à suivre
 
-**1. Clone the application**
+**1. Cloner le projet**
 
 ```bash
-git clone https://github.com/callicoder/spring-boot-mysql-rest-api-tutorial.git
+git clone https://github.com/franck30/noteRestApi.git
+
 ```
 
-**2. Create Mysql database**
+**2. Créer la base de donnees MYSQL**
 ```bash
 create database notes_app
 ```
 
-**3. Change mysql username and password as per your installation**
+**3. Changer le username et le mot de passe mySql pour correspondre a votre installation**
 
-+ open `src/main/resources/application.properties`
 
-+ change `spring.datasource.username` and `spring.datasource.password` as per your mysql installation
++ ouvrir `src/main/resources/application.properties`
 
-**4. Build and run the app using maven**
++ changer `spring.datasource.username` et `spring.datasource.password` pour correspondre a votre installation mySql
+
+**4. Compiler et lancer le projet avec Maven**
 
 ```bash
 mvn package
 java -jar target/easy-notes-1.0.0.jar
 ```
 
-Alternatively, you can run the app without packaging it using -
+Autre alternative, lancer le projet sans le packager avec cette commande -
 
 ```bash
 mvn spring-boot:run
 ```
 
-The app will start running at <http://localhost:8080>.
+l'application sera lancée a l'adresse <http://localhost:8080>.
 
-## Explore Rest APIs
+## Explorer les APIs REST
 
-The app defines following CRUD APIs.
+L'application expose les api REST suivantes.
 
     GET /api/notes
     
@@ -58,10 +56,4 @@ The app defines following CRUD APIs.
     
     DELETE /api/notes/{noteId}
 
-You can test them using postman or any other rest client.
-
-## Learn more
-
-You can find the tutorial for this application on my blog -
-
-<https://www.callicoder.com/spring-boot-rest-api-tutorial-with-mysql-jpa-hibernate/>
+Vous pouvez les tester en utilisant Postman ou tout autre client REST.
